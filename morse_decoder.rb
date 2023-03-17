@@ -33,10 +33,10 @@ def get_letter(letter)
 end
 
 def decode_char(character)
-  @current_word = ""
+  @current_word = ''
   @current_word += get_letter(character)
 end
-print "#{@current_word}"
+print "#{@current_word} "
 
 def decode_word(word)
   @letters = word.split
