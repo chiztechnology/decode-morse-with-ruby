@@ -1,30 +1,30 @@
 @dictionary = {
-  ".-" => "A",
-  "-..." => "B",
-  "-.-." => "C",
-  "-.." => "D",
-  "." => "E",
-  "..-." => "F",
-  "--." => "G",
-  "...." => "H",
-  ".." => "I",
-  ".---" => "J",
-  "-.-" => "K",
-  ".-.." => "L",
-  "--" => "M",
-  "-." => "N",
-  "---" => "O",
-  ".--." => "P",
-  "--.-" => "Q",
-  ".-." => "R",
-  "..." => "S",
-  "-" => "T",
-  "..-" => "U",
-  "...-" => "V",
-  ".--" => "W",
-  "-..-" => "X",
-  "-.--" => "Y",
-  "--.." => "Z"
+  '.-' => 'A',
+  '-...' => 'B',
+  '-.-.' => 'C',
+  '-..' => 'D',
+  '.' => 'E',
+  '..-.' => 'F',
+  '--.' => 'G',
+  '....' => 'H',
+  '..' => 'I',
+  '.---' => 'J',
+  '-.-' => 'K',
+  '.-..' => 'L',
+  '--' => 'M',
+  '-.' => 'N',
+  '---' => 'O',
+  '.--.' => 'P',
+  '--.-' => 'Q',
+  '.-.' => 'R',
+  '...' => 'S',
+  '-' => 'T',
+  '..-' => 'U',
+  '...-' => 'V',
+  '.--' => 'W',
+  '-..-' => 'X',
+  '-.--' => 'Y',
+  '--..' => 'Z'
 }
 
 def get_letter(letter)
@@ -40,7 +40,7 @@ print "#{@current_word}"
 
 def decode_word(word)
   @letters = word.split
-  @current_word = ""
+  @current_word = ''
   @letters.each do |letter|
     get_letter(letter)
     @current_word += get_letter(letter)
@@ -49,10 +49,10 @@ def decode_word(word)
 end
 
 def decode_message(message)
-  @words = message.split("   ")
-  @words.each { |word| decode_word(word) }
+  @words = message.split('   ')
+  @words.each do |word|
+    decode_word(word)
+  end
 end
 
-decode_message(
-  "      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
-)
+decode_message('      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
