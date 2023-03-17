@@ -32,13 +32,11 @@ def get_letter(letter)
     @current_letter
   end
 
-
   def decode_char(character)
     @current_word = ''
     @current_word += get_letter(character)
   end
   print "#{@current_word}"
-
   
   def decode_word(word)
     @letters = word.split
@@ -50,13 +48,11 @@ def get_letter(letter)
     print "#{@current_word} "
   end
 
-  
   def decode_message(message)
     @words = message.split('   ')
     @words.each do |word|
       decode_word(word)
     end
   end
-  
 
   decode_message('      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
