@@ -31,6 +31,14 @@ def get_letter(letter)
     @current_letter = @dictionary[letter]
     @current_letter
   end
+
+
+  def decode_char(character)
+    @current_word = ''
+    @current_word += get_letter(character)
+  end
+  print "#{@current_word}"
+
   
   def decode_word(word)
     @letters = word.split
@@ -41,6 +49,7 @@ def get_letter(letter)
     end
     print "#{@current_word} "
   end
+
   
   def decode_message(message)
     @words = message.split('   ')
@@ -49,4 +58,5 @@ def get_letter(letter)
     end
   end
 
-  decode_message('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+  
+  decode_message('      .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
