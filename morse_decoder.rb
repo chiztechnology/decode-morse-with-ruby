@@ -48,3 +48,5 @@ def get_letter(letter)
       decode_word(word)
     end
   end
+
+  decode_message('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
